@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <title>My first HTML page</title>
+    </head>
+    <body>
+        <header>
+            <div><a href="./">Project</a></div>
+            <div>
+                <ul>
+                    <li><a href="./projects">Projects</a></li>
+                    <li><a href="./about-us">About us</a></li>
+                    <li><a href="./stories">Stories</a></li>
+                    <li><a href="./contact">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <picture>
+                <source media="(min-width:600px)" srcset="./assets/logo-big.png">
+                <source srcset="./assets/logo-mini.png">
+                <img src="./assets/logo.png" alt="Logo">
+            </picture>
+            <div><h1>Your Headline<br>Here</h1></div>
+            <div><h2>Lorem ipsum dolor sit, amet consectetur<br>adipisicing elit sed do uesimod.</h2></div>
+            <div><h2>This is the Section Heasdline<br>Continues to Two Lines</h2></div>
+            <div><h3>Lorem ipsum dolor sit, amet consectetur<br>adipisicing elit sed do uesimod.</h3></div>
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa facilis nesciunt quaerat amet? Fugiat cupiditate deleniti odio officiis earum saepe fugit pariatur tempora placeat debitis assumenda voluptatum ipsa, temporibus vitae?<br>
+                Ducimus rerum eum laudantium velit exercitationem repellendus nam? Impedit, perferendis recusandae praesentium eius labore modi nisi? Vitae debitis sed dignissimos accusamus, fugit corporis atque deleniti perspiciatis magnam blanditiis rem officiis?</p>
+            </article>
+            <input type="button" value="Read more">
+            <div><h2>Learn more<br>about our culture</h2></div>
+            <button id="ASong" onClick="playPause()">
+                <audio
+                  src="./assets/about.mp3"
+                  autoplay
+                  loop
+                ></audio>
+                &#9654;
+              </button>
+              
+              <script>
+                var aud = document.getElementById("ASong").children[0];
+                var isPlaying = false;
+                aud.pause();
+              
+                function playPause() {
+                  if (isPlaying) {
+                    aud.pause();
+                  } else {
+                    aud.play();
+                  }
+                  isPlaying = !isPlaying;
+                }
+              </script>
+            <!--<audio loop controls src="./assets/about.mp3"></audio> -->
+            <h3>Duis aute irure dolor in<br>repehenderit in volupate velit esse<br>cillum dolore eu gufiat nulla</h3>
+            
+        </main>
+        <footer>
+            <p><img src="./assets/logo-small.png" alt="Small logo">Project</p>
+            <p><i>123 Street</i><br>
+            <i>Anytown, USA 12345 </i><a href="mailto:hello@website.com">hello@website.com</a><br><br>
+            &copy; 2021 Project. All rights reserved</p>
+        </footer>
+    </body>
+</html>
